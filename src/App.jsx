@@ -1,6 +1,6 @@
 
 import './App.css'
-import ToDo from './ToDo';
+// import ToDo from './ToDo';
 import Actor from './Actor';
 import Singer from './Singer'
 
@@ -19,11 +19,11 @@ function App() {
      <h1>React Core concepts</h1>  
 
      {
-      singers.map(singer => <Singer  singer={singer}></Singer>)
+      singers.map(singer => <Singer key={singer.id}  singer={singer}></Singer>)
      }
 
      {
-      actors.map(actor => <Actor actor={actor}></Actor>)
+      actors.map((actor, index) => <Actor  key={index} actor={actor}></Actor>)
      }
 
      {/* <ToDo task="Learn React" isDone={true} time={time}></ToDo>
